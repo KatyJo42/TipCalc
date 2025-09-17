@@ -16,9 +16,9 @@
             <Label Text="Service Quality:" HorizontalOptions="Center" FontSize="Large" Margin="0,20"/>
             
 
-            <Button Text="Calculate Tip" Margin="30,0,175,5" x:Name="txtFifteenPercent" />
-            <Button Text="Calculate Tip" Margin="30,5,175,5" x:Name="txtTwentyPercent" />
-            <Button Text="Calculate Tip" Margin="30,5,175,5" x:Name="txtTwentyFivePercent" />
+            <Button Text="Calculate 15% Tip" Margin="30,0,175,5" x:Name="txtFifteenPercent" />
+            <Button Text="Calculate 20% Tip" Margin="30,5,175,5" x:Name="txtTwentyPercent" />
+            <Button Text="Calculate 25% Tip" Margin="30,5,175,5" x:Name="txtTwentyFivePercent" />
             
             <Label Text="()Tip:" /> 
 
