@@ -2,26 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TipCalculator.MainPage">
+    
+    
 
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             Padding="20,30,20,20" >
             
-            <Label Text="Tip Calculator" HorizontalOptions="Center" FontSize="Title" />
             
+            
+            <Label Text="Tip Calculator" HorizontalOptions="Center" FontSize="Title" />
+
             <Label Text="Bill Amount:" HorizontalOptions="Center" FontSize="Large" />
             <Entry x:Name="txtBillAmount" Keyboard="Numeric" />
-            
+
             <Label Text="Service Quality:" HorizontalOptions="Center" FontSize="Large" Margin="0,20"/>
-            
 
-            <Button Text="Calculate 15% Tip" Margin="30,0,175,5" x:Name="txtFifteenPercent" />
-            <Button Text="Calculate 20% Tip" Margin="30,5,175,5" x:Name="txtTwentyPercent" />
-            <Button Text="Calculate 25% Tip" Margin="30,5,175,5" x:Name="txtTwentyFivePercent" />
+            <Button Text="Calculate 15% Tip" Margin="30,0,175,5" x:Name="btnFifteen" Clicked="Fifteen_OnClicked" />
             
-            <Label Text="()Tip:" /> 
+            <Button Text="Calculate 20% Tip" Margin="30,5,175,5" x:Name="btnTwenty" Clicked="Twenty_OnClicked" />
+            
+            <Button Text="Calculate 25% Tip" Margin="30,5,175,5" x:Name="btnTwentyFive" Clicked="TwentyFive_OnClicked" />
+            
+            <Label x:Name="lblDisplay" Text="Tip:" FontSize="Large" />
 
+            
         </VerticalStackLayout>
     </ScrollView>
 

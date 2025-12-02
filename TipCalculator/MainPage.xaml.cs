@@ -10,16 +10,44 @@ public partial class MainPage : ContentPage
         Title = "Tip Calculator";
     }
 
-    private void Multiply_OnClicked(object sender, EventArgs e)
+    private bool TryGetBillAmount(out double billAmount)
     {
-        double dblFifteen, dblTwenty, dblTwentyFive;
-        Double.TryParse(txtFifteenPercent.Text, out dblFifteen);
-        Double.TryParse(txtTwentyPercent.Text, out dblTwenty);
-        Double.TryParse(txtTwentyFivePercent.Text, out dblTwentyFive);
-
-        lblDisplay.Text = dblFifteen("bill amount").ToString();
-        lblDisplay.Text = dblTwenty("bill amount").ToString();
+        return double.TryParse(txtBillAmount.Text, out billAmount);
     }
 
-  
+    private void Fifteen_OnClicked(object sender, EventArgs e)
+    {
+        if (TryGetBillAmount(out double bill))
+        {
+            lblDisplay.Text = $"15% Tip: {(bill * 0.15):C}";
+        }
+        else
+        {
+            lblDisplay.Text = "Please enter a valid bill amount.";
+        }
+    }
+
+    private void Twenty_OnClicked(object sender, EventArgs e)
+    {
+        if (TryGetBillAmount(out double bill))
+        {
+            lblDisplay.Text = $"20% Tip: {(bill * 0.20):C}";
+        }
+        else
+        {
+            lblDisplay.Text = "Please enter a valid bill amount.";
+        }
+    }
+
+    private void TwentyFive_OnClicked(object sender, EventArgs e)
+    {
+        if (TryGetBillAmount(out double bill))
+        {
+            lblDisplay.Text = $"25% Tip: {(bill * 0.25):C}";
+        }
+        else
+        {
+            lblDisplay.Text = "Please enter a valid bill amount.";
+        }
+    }
 }
